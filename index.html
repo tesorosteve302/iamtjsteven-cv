@@ -64,6 +64,20 @@
           <div class="muted">IT System & Network Administrator / NOC Technician</div>
           <div class="small">Based in Philippines • 5+ years experience</div>
         </div>
+        <button id="downloadBtn">Download as PNG</button>
+        <script>
+document.getElementById("downloadBtn").addEventListener("click", () => {
+    const cvElement = document.getElementById("cv");
+
+    html2canvas(cvElement).then(canvas => {
+        // Convert canvas to PNG
+        const link = document.createElement("a");
+        link.download = "CV_Steven_Tesoro.png";
+        link.href = canvas.toDataURL("image/png");
+        link.click();
+    });
+});
+</script>
       </div>
 
       <div class="section">
